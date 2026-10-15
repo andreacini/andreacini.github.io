@@ -6,7 +6,7 @@
 title: Andrea Cini # the website title (if blank, full name will be used instead)
 first_name: Andrea
 last_name: Cini
-email: andrea.cini@cs.ox.ac.uk
+email: andrea.cini@epfl.ch
 description: Andrea Cini's Home Page # the ">" symbol means to ignore newlines until "footer_text:"
 footer_text: >
   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
@@ -108,7 +108,7 @@ collections:
     output: true
     permalink: /news/:path/
 
-news_limit: 2
+news_limit: 4
 
 # -----------------------------------------------------------------------------
 # Jekyll settings

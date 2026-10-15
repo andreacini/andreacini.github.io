@@ -1,11 +1,16 @@
           
           <div class="news">
+            {%- if include.all -%}
+              {%- assign news_limit = site.news.size -%}
+            {%- else -%}
+              {%- assign news_limit = site.news_limit -%}
             <h2>News</h2>
-            {% if site.news  -%} 
+            {%- endif %}
+            {% if site.news  -%}
             <div class="table-responsive">
               <table class="table table-sm table-borderless">
-              {%- assign news = site.news | reverse -%} 
-              {% for item in news limit: site.news_limit %} 
+              {%- assign news = site.news | reverse -%}
+              {% for item in news limit: news_limit %}
                 <tr>
                   <th scope="row">{{ item.date | date: "%b %-d, %Y" }}</th>
                   <td>
@@ -19,7 +24,10 @@
               {%- endfor %} 
               </table>
             </div>
-          {%- else -%} 
+            {%- unless include.all %}
+            <p class="text-right"><a href="{{ '/news/' | relative_url }}">All news &rarr;</a></p>
+            {%- endunless %}
+          {%- else -%}
             <p>No news so far...</p>
           {%- endif %} 
           </div>
