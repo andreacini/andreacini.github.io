@@ -22,7 +22,7 @@ Hi! I'm an incoming tenure-track Assistant Professor in [Applied Mathematics](ht
 
 I am currently spending the final months of my [Swiss National Science Foundation](https://www.snf.ch/en) fellowship at [Mila](https://mila.quebec/en) and [McGill University](https://www.mcgill.ca/), hosted by Prof. [Reihaneh Rabbany](https://www.reirab.com/). I am also affiliated with [IDSIA](https://www.idsia.ch/), at [USI](https://www.usi.ch/it), and the [NGMLG](https://ngmlgroup.github.io/), at the [UiT the Arctic University of Norway](https://en.uit.no/startsida). I am a proud member of the [ELLIS Society](https://ellis.eu/).
 
-You can have a look at my [CV](../assets/pdf/cv_mar2026.pdf) and find an updated list of my publications on [Google Scholar](https://scholar.google.com/citations?user=bQI2UIUAAAAJ&hl=en).
+You can have a look at my [CV](../assets/pdf/cv_oct2026.pdf) and find an updated list of my publications on [Google Scholar](https://scholar.google.com/citations?user=bQI2UIUAAAAJ&hl=en).
 
 ### Short bio
 
