@@ -1,7 +1,5 @@
 ---
-layout: post
 date: 2025-10-27 22:0:00+0100
-inline: true
 ---
 
 

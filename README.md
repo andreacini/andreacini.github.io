@@ -1,26 +1,22 @@
-README
+# andreacini.github.io
 
-To deploy on GitHub pages:
+Personal academic website, built with a small custom Jekyll theme.
 
-1.
+- Home page text: `_pages/about.md`
+- News items: one Markdown file per item in `_news/` (only `date` in the front matter)
+- Publications: `_data/publications.yml` (newest first, grouped by year on the page; `A. Cini` is highlighted automatically; optional `pdf` and `code` links and `abstract`/`bibtex` drop-downs)
+- Research projects: `_data/projects.yml`; open-source projects: `_data/software.yml` (logos in `assets/img/`)
+- Name, tagline, links, nav and CV path: `_config.yml`
+- Styles: `assets/css/main.scss`
 
-Check offline the changes that you have made by running:
-```bash
-bundle exec jekyll serve
-```
-
-2.
-
-Commit and push changes to master.
-
-3.
-
-From the root directory:
-
-Run the deploy script from the root directory of your repository:
+Preview locally:
 
 ```bash
-$ ./bin/deploy
+bundle exec jekyll serve --livereload
 ```
 
-uses the `master` branch for the source code and deploys the webpage to `gh-pages`.
+Deploy (builds `master` and pushes the result to `gh-pages`):
+
+```bash
+./bin/deploy
+```

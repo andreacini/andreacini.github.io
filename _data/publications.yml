@@ -1,0 +1,1001 @@
+# Publication list, rendered on /publications/ grouped by year.
+# Keep entries ordered by year (newest first); within a year they appear as listed.
+# "A. Cini" in `authors` is highlighted automatically.
+# Entries with `type: thesis` are listed in their own section at the bottom.
+# abstract: from arXiv, the publisher (via Crossref), JMLR or Semantic Scholar; bibtex: JMLR's own, or built from that metadata.
+
+- title: Learning to Forecast on Multiple Spatiotemporal Hierarchies
+  authors: V. Moretti, C. Alippi, A. Cini
+  venue: arXiv preprint
+  year: 2026
+  url: https://arxiv.org/abs/2610.21414
+  pdf: https://arxiv.org/pdf/2610.21414
+  abstract: >-
+    Hierarchical forecasting exploits aggregation structures that expose multiple views of the same
+    underlying spatiotemporal forecasting problem, while ensuring coherence among forecasts. Individual
+    series provide fine-grained information, while progressively coarser aggregates reveal temporal and
+    spatial patterns at different scales. In the associated deep learning architectures, the hierarchy
+    determines which aggregate series are available and how they are processed together with individual
+    series (e.g., through reconciliation or message-passing operators). Different hierarchies thus
+    provide distinct learning signals and inductive biases for forecasting the same collection of time
+    series. Nonetheless, existing architectures are typically trained on a single, often fixed,
+    structure. In this work, we propose a graph deep learning framework that leverages variations across
+    hierarchies as multi-task regularization. We show that jointly learning across these structures can
+    reduce over-specialization to any single hierarchy and improve forecasting performance. Indeed,
+    training across hierarchies provides an inductive bias toward representations that are useful across
+    different structures, and as such, generalize better. Making forecasts coherent with the aggregation
+    constraints for each sampled hierarchy is computationally expensive: to complement the framework, we
+    propose a novel operator-based on a top-down approach-that produces coherent forecasts with linear
+    time and space complexity w.r.t. the hierarchy size. Experiments show that our approach improves
+    forecasting accuracy over training on a single structure and is competitive with current state-of-the-art methods.
+  bibtex: |-
+    @misc{moretti2026learning,
+      title = {{Learning to Forecast on Multiple Spatiotemporal Hierarchies}},
+      author = {Valentina Moretti and Cesare Alippi and Andrea Cini},
+      eprint = {2610.21414},
+      archivePrefix = {arXiv},
+      year = {2026},
+      url = {https://arxiv.org/abs/2610.21414}
+    }
+- title: Continual Graph Multi-Agent Reinforcement Learning
+  authors: T. Marzi, A. Hendawy, J. Peters, C. D'Eramo, A. Cini, C. Alippi
+  venue: arXiv preprint
+  year: 2026
+  url: https://arxiv.org/abs/2610.10302
+  pdf: https://arxiv.org/pdf/2610.10302
+  abstract: >-
+    In Continual Multi-Agent Reinforcement Learning (CMARL), agents learn cooperative policies across
+    sequences of tasks, aiming to adapt effectively to new tasks while preserving the ability to solve
+    previously encountered ones. In many applications, tasks differ in their underlying structure, which
+    can represent, for example, distinct operational conditions or target configurations (e.g., different
+    network topologies in power grids or arrangements in formation control). Existing CMARL methods lack
+    dedicated mechanisms to leverage this structural information when learning new tasks, failing to promote
+    transfer and mitigate forgetting. To fill this gap, we propose Continual Graph Multi-Agent Reinforcement
+    Learning (CGMARL), a novel framework for CMARL problems in which task sequences are mapped into a
+    series of attributed graphs, each modeling a task-specific structure. In CGMARL, each graph determines
+    the environment dynamics (next states and/or rewards) and the number of agents for the corresponding
+    task. Then, we present Graph-based Formation (GRAFO), the first CGMARL benchmark, and show how forgetting
+    arises in this setting. Finally, to address this limitation, we propose Frozen Graph Encoder (FROG),
+    a method that relies on a frozen graph backbone to preserve past structural information in graph-based
+    CMARL policies. Experiments on GRAFO show that pairing FROG with existing CL methods substantially
+    improves performance on multiple CGMARL scenarios.
+  bibtex: |-
+    @misc{marzi2026continual,
+      title = {{Continual Graph Multi-Agent Reinforcement Learning}},
+      author = {Tommaso Marzi and Ahmed Hendawy and Jan Peters and Carlo D'Eramo and Andrea Cini and Cesare Alippi},
+      eprint = {2610.10302},
+      archivePrefix = {arXiv},
+      year = {2026},
+      url = {https://arxiv.org/abs/2610.10302}
+    }
+- title: Graph State-Space Models and Latent Relational Inference
+  authors: D. Zambon, A. Cini, C. Alippi
+  venue: arXiv preprint
+  year: 2026
+  url: https://arxiv.org/abs/2301.01741
+  pdf: https://arxiv.org/pdf/2301.01741
+  abstract: >-
+    State-space models effectively model multivariate time series by updating over time a representation
+    of the system state from which predictions are made. The state representation is usually a vector
+    without any explicit structure. Relational inductive biases, e.g., associated with dependencies among
+    input signals and state representations, are not explicitly exploited during processing, leaving unattended
+    opportunities for effective modeling. The manuscript aims to fill this gap by matching state-space
+    modeling and spatio-temporal data where the relational information, say the functional graph capturing
+    latent dependencies, is learned directly from time series. In particular, we propose Graph State-Space
+    Models, a novel probabilistic framework that jointly learns state-space dynamics and latent relational
+    structures end-to-end on downstream tasks. The proposed framework generalizes several state-of-the-art
+    methods and, as we show, is effective in extracting meaningful latent relational structures and obtaining
+    accurate forecasts.
+  bibtex: |-
+    @misc{zambon2026graph,
+      title = {{Graph State-Space Models and Latent Relational Inference}},
+      author = {Daniele Zambon and Andrea Cini and Cesare Alippi},
+      eprint = {2301.01741},
+      archivePrefix = {arXiv},
+      year = {2026},
+      url = {https://arxiv.org/abs/2301.01741}
+    }
+
+- title: Why Do Time Series Models Need Long Context Windows?
+  authors: L. Butera, G. De Felice, A. Cini, C. Alippi
+  venue: NeurIPS
+  year: 2026
+  url: https://arxiv.org/abs/2606.01999
+  pdf: https://arxiv.org/pdf/2606.01999
+  abstract: >-
+    Modern deep learning models for forecasting groups of time series rely on increasingly longer observation
+    windows. However, the benefit of increasing the window size is often simply attributed to capturing
+    long-range dependencies, and broader discussion on how global forecasting models leverage input observations
+    has been limited. In this paper, we show that forecasting groups of time series involves two objectives:
+    (i) generative process identification (GPI), i.e., inferring the specific process generating the input
+    sequence, and (ii) conditional forecasting (CF), i.e., predicting future values given input observations.
+    From this perspective, optimal predictions can be interpreted as an average over plausible data-generating
+    processes, weighted by their likelihood given the input window. This suggests another explanation
+    for the benefits of long context windows: they reduce the uncertainty about which specific process
+    is generating the input time series during operation. We prove that even for processes with memory
+    length <em>P</em>, an input window size strictly larger than <em>P</em> is necessary to achieve the minimum attainable
+    error. Finally, we show how decoupling GPI and CF can improve computational scalability without compromising
+    accuracy. Experiments on synthetic and real-world data validate our insights and their relevance for
+    designing forecasting architectures.
+  bibtex: |-
+    @inproceedings{butera2026time,
+      title = {{Why Do Time Series Models Need Long Context Windows?}},
+      author = {Luca Butera and Giovanni De Felice and Andrea Cini and Cesare Alippi},
+      booktitle = {Advances in Neural Information Processing Systems},
+      year = {2026},
+      url = {https://arxiv.org/abs/2606.01999}
+    }
+- title: 'Position: Current Benchmarking Hinders Real Progress in Deep Learning for Time Series Forecasting'
+  authors: V. Moretti, I. Marisca, C. Alippi, A. Cini
+  venue: ICML Position Paper Track
+  year: 2026
+  url: https://openreview.net/forum?id=gtwbLmO7Wb
+  pdf: https://arxiv.org/pdf/2512.22702
+  code: https://github.com/valentina-moretti/deep-forecasting-benchmarking-issues
+  abstract: >-
+    Deep learning models have grown popular in time series applications. However, the large quantity of
+    newly proposed architectures and the often contradictory empirical results make it difficult to assess
+    which design choice and model component drives performance. In this position paper, we argue that
+    current benchmarking practices fail to identify the factors responsible for performance differences,
+    thus slowing down progress in the field. In particular, differences in crucial design dimensions are
+    overlooked when comparing architectures, ultimately leading to inconsistent outcomes. To support our
+    position, we show that such differences-often treated as mere implementation details-can have a greater
+    impact than adopting specific sequence modeling layers. We discuss how overlooked aspects (such as
+    globality and locality) can (1) fundamentally change the class of the forecasting method and (2) drastically
+    affect empirical results. Our findings suggest rethinking our benchmarking practices and focusing
+    on the foundational aspects of the forecasting problem when designing and comparing architectures.
+    As a concrete step, we propose an auxiliary forecasting model card, i.e., a template with a set of
+    fields to characterize existing and new forecasting architectures based on key design choices.
+  bibtex: |-
+    @inproceedings{moretti2026current,
+      title = {{Position: Current Benchmarking Hinders Real Progress in Deep Learning for Time Series Forecasting}},
+      author = {Moretti, Valentina and Marisca, Ivan and Alippi, Cesare and Cini, Andrea},
+      booktitle = {Proceedings of the 43rd International Conference on Machine Learning},
+      pages = {171515--171539},
+      year = {2026},
+      volume = {306},
+      series = {Proceedings of Machine Learning Research},
+      publisher = {PMLR},
+      url = {https://proceedings.mlr.press/v306/moretti26a.html}
+    }
+- title: 'ResCP: Reservoir Conformal Prediction for Time Series Forecasting'
+  authors: R. Neglia, A. Cini, M. M. Bronstein, F. M. Bianchi
+  venue: ICLR
+  year: 2026
+  url: https://openreview.net/forum?id=WGqibe5H3W
+  pdf: https://arxiv.org/pdf/2510.05060
+  code: https://github.com/NGMLGroup/reservoir-conformal-prediction
+  abstract: >-
+    Conformal prediction offers a powerful framework for building distribution-free prediction intervals
+    for exchangeable data. Existing methods that extend conformal prediction to sequential data rely on
+    fitting a relatively complex model to capture temporal dependencies. However, these methods can fail
+    if the sample size is small and often require expensive retraining when the underlying data distribution
+    changes. To overcome these limitations, we propose Reservoir Conformal Prediction (ResCP), a novel
+    training-free conformal prediction method for time series. Our approach leverages the efficiency and
+    representation learning capabilities of reservoir computing to dynamically reweight conformity scores.
+    In particular, we compute similarity scores among reservoir states and use them to adaptively reweight
+    the observed residuals at each step. With this approach, ResCP enables us to account for local temporal
+    dynamics when modeling the error distribution without compromising computational scalability. We prove
+    that, under reasonable assumptions, ResCP achieves asymptotic conditional coverage, and we empirically
+    demonstrate its effectiveness across diverse forecasting tasks.
+  bibtex: |-
+    @inproceedings{neglia2026rescp,
+      title = {{ResCP: Reservoir Conformal Prediction for Time Series Forecasting}},
+      author = {Roberto Neglia and Andrea Cini and Michael M. Bronstein and Filippo Maria Bianchi},
+      booktitle = {International Conference on Learning Representations},
+      year = {2026},
+      url = {https://openreview.net/forum?id=WGqibe5H3W}
+    }
+- title: Hierarchical Message-Passing Policies for Multi-Agent Reinforcement Learning
+  authors: T. Marzi, C. Alippi, A. Cini
+  venue: arXiv preprint
+  year: 2025
+  url: https://arxiv.org/abs/2507.23604
+  pdf: https://arxiv.org/pdf/2507.23604
+  abstract: >-
+    Decentralized Multi-Agent Reinforcement Learning (MARL) methods allow for learning scalable multi-agent
+    policies, but suffer from partial observability and induced non-stationarity. These challenges can
+    be addressed by introducing mechanisms that facilitate coordination and high-level planning. Specifically,
+    coordination and temporal abstraction can be achieved through communication (e.g., message passing)
+    and Hierarchical Reinforcement Learning (HRL) approaches to decision-making. However, optimization
+    issues limit the applicability of hierarchical policies to multi-agent systems. As such, the combination
+    of these approaches has not been fully explored. To fill this void, we propose a novel and effective
+    methodology for learning multi-agent hierarchies of message-passing policies. We adopt the feudal
+    HRL framework and rely on a hierarchical graph structure for planning and coordination among agents.
+    Agents at lower levels in the hierarchy receive goals from the upper levels and exchange messages
+    with neighboring agents at the same level. To learn hierarchical multi-agent policies, we design a
+    novel reward-assignment method based on training the lower-level policies to maximize the advantage
+    function associated with the upper levels. Results on relevant benchmarks show that our method performs
+    favorably compared to the state of the art.
+  bibtex: |-
+    @misc{marzi2025hierarchical,
+      title = {{Hierarchical Message-Passing Policies for Multi-Agent Reinforcement Learning}},
+      author = {Tommaso Marzi and Cesare Alippi and Andrea Cini},
+      eprint = {2507.23604},
+      archivePrefix = {arXiv},
+      year = {2025},
+      url = {https://arxiv.org/abs/2507.23604}
+    }
+- title: Learning to Predict Global Atrial Fibrillation Dynamics from Sparse Measurements
+  authors: >-
+    A. Jenkins, A. Cini, J. Barker, A. Sharp, A. Sau, V. Valentine, S. Valasang, X. Li, T. Wong, T. Betts,
+    D. Mandic, C. Alippi, F. S. Ng
+  venue: arXiv preprint
+  year: 2025
+  url: https://arxiv.org/abs/2502.09473
+  pdf: https://arxiv.org/pdf/2502.09473
+  abstract: >-
+    Catheter ablation of Atrial Fibrillation (AF) consists of a one-size-fits-all treatment with limited
+    success in persistent AF. This may be due to our inability to map the dynamics of AF with the limited
+    resolution and coverage provided by sequential contact mapping catheters, preventing effective patient
+    phenotyping for personalised, targeted ablation. Here we introduce FibMap, a graph recurrent neural
+    network model that reconstructs global AF dynamics from sparse measurements. Trained and validated
+    on 51 non-contact whole atria recordings, FibMap reconstructs whole atria dynamics from 10% surface
+    coverage, achieving a 210% lower mean absolute error and an order of magnitude higher performance
+    in tracking phase singularities compared to baseline methods. Clinical utility of FibMap is demonstrated
+    on real-world contact mapping recordings, achieving reconstruction fidelity comparable to non-contact
+    mapping. FibMap's state-spaces and patient-specific parameters offer insights for electrophenotyping
+    AF. Integrating FibMap into clinical practice could enable personalised AF care and improve outcomes.
+  bibtex: |-
+    @misc{jenkins2025learning,
+      title = {{Learning to Predict Global Atrial Fibrillation Dynamics from Sparse Measurements}},
+      author = {Alexander Jenkins and Andrea Cini and Joseph Barker and Alexander Sharp and Arunashis Sau and Varun Valentine and Srushti Valasang and Xinyang Li and Tom Wong and Timothy Betts and Danilo Mandic and Cesare Alippi and Fu Siong Ng},
+      eprint = {2502.09473},
+      archivePrefix = {arXiv},
+      year = {2025},
+      url = {https://arxiv.org/abs/2502.09473}
+    }
+- title: Relational Conformal Prediction for Correlated Time Series
+  authors: A. Cini, A. Jenkins, D. Mandic, C. Alippi, F. M. Bianchi
+  venue: ICML
+  year: 2025
+  url: https://openreview.net/forum?id=wwYDQ1vXcZ
+  pdf: https://arxiv.org/pdf/2502.09443
+  code: https://github.com/andreacini/corel
+  abstract: >-
+    We address the problem of uncertainty quantification in time series forecasting by exploiting observations
+    at correlated sequences. Relational deep learning methods leveraging graph representations are among
+    the most effective tools for obtaining point estimates from spatiotemporal data and correlated time
+    series. However, the problem of exploiting relational structures to estimate the uncertainty of such
+    predictions has been largely overlooked in the same context. To this end, we propose a novel distribution-free
+    approach based on the conformal prediction framework and quantile regression. Despite the recent applications
+    of conformal prediction to sequential data, existing methods operate independently on each target
+    time series and do not account for relationships among them when constructing the prediction interval.
+    We fill this void by introducing a novel conformal prediction method based on graph deep learning
+    operators. Our approach, named Conformal Relational Prediction (CoRel), does not require the relational
+    structure (graph) to be known a priori and can be applied on top of any pre-trained predictor. Additionally,
+    CoRel includes an adaptive component to handle non-exchangeable data and changes in the input time
+    series. Our approach provides accurate coverage and achieves state-of-the-art uncertainty quantification
+    in relevant benchmarks.
+  bibtex: |-
+    @inproceedings{cini2025relational,
+      title = {{Relational Conformal Prediction for Correlated Time Series}},
+      author = {Cini, Andrea and Jenkins, Alexander and Mandic, Danilo and Alippi, Cesare and Bianchi, Filippo Maria},
+      booktitle = {Proceedings of the 42nd International Conference on Machine Learning},
+      pages = {10949--10965},
+      year = {2025},
+      volume = {267},
+      series = {Proceedings of Machine Learning Research},
+      publisher = {PMLR},
+      url = {https://proceedings.mlr.press/v267/cini25a.html}
+    }
+- title: Temporal Graph Learning Workshop
+  authors: S. Huang, D. Zambon, A. Cini, F. Poursafaei, J. Chmura, J. Gastinger, R. Rabbany, M. Bronstein
+  venue: KDD
+  year: 2025
+  url: https://doi.org/10.1145/3711896.3737855
+  abstract: >-
+    The Temporal Graph Learning (TGL) workshop, now in its third edition at KDD 2025, offers an interdisciplinary
+    platform for researchers to explore the evolving applications of temporal networks in various domains,
+    including recommender systems, social network analysis, traffic analytics, and epidemiological data
+    analysis. The workshop aims to facilitate the exchange of ideas across disciplines, highlight successes
+    and challenges in TGL, and outline future research directions. The workshop welcomes diverse contributions,
+    offers keynote talks from academic and industry experts, and is complemented by a panel discussion
+    on emerging aspects of TGL.
+  bibtex: |-
+    @inproceedings{huang2025temporal,
+      title = {{Temporal Graph Learning Workshop}},
+      author = {Shenyang Huang and Daniele Zambon and Andrea Cini and Farimah Poursafaei and Jacob Chmura and Julia Gastinger and Reihaneh Rabbany and Michael Bronstein},
+      booktitle = {Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2},
+      year = {2025},
+      pages = {6280--6281},
+      doi = {10.1145/3711896.3737855},
+      url = {https://doi.org/10.1145/3711896.3737855}
+    }
+- title: On Time Series Clustering with Graph Neural Networks
+  authors: J. B. Hansen, A. Cini, F. M. Bianchi
+  venue: TMLR
+  year: 2025
+  url: https://openreview.net/forum?id=MHQXfiXsr3
+  pdf: https://openreview.net/pdf?id=MHQXfiXsr3
+  code: https://github.com/NGMLGroup/Time-Series-Clustering-with-GNNs
+  abstract: >-
+    Graph clustering and pooling operators have been adopted in graph-based architectures to capture
+    meaningful patterns in time series data by leveraging both temporal and relational structures.
+    However, the contribution of each design choice and the behavior of different operators remain
+    underexplored. This work introduces a streamlined deep learning framework based on a
+    spatio-temporal graph neural network (STGNN) for clustering time series, which can leverage prior
+    knowledge on the spatial structure of the data. The STGNN-based model flexibly identifies
+    clusters in various data settings through an encoder-decoder architecture with a bottleneck,
+    showing that a spatio-temporal approach can identify meaningful clusters even in datasets that do
+    not explicitly include spatial relations. We validate the framework’s qualitative performance
+    through experiments on synthetic and real-world data, showing its effectiveness in different
+    scenarios. We also provide a heuristic for model selection in unsupervised settings via a
+    self-supervised forecasting loss.
+  bibtex: |-
+    @article{hansen2025on,
+      title = {On Time Series Clustering with Graph Neural Networks},
+      author = {Jonas Berg Hansen and Andrea Cini and Filippo Maria Bianchi},
+      journal = {Transactions on Machine Learning Research},
+      issn = {2835-8856},
+      year = {2025},
+      url = {https://openreview.net/forum?id=MHQXfiXsr3}
+    }
+- title: Graph Deep Learning for Time Series Forecasting
+  authors: A. Cini, I. Marisca, D. Zambon, C. Alippi
+  venue: ACM Computing Surveys
+  year: 2025
+  url: https://doi.org/10.1145/3742784
+  pdf: https://arxiv.org/pdf/2310.15978
+  abstract: >-
+    Graph deep learning methods have become popular tools to process collections of correlated time series.
+    Unlike traditional multivariate forecasting methods, graph-based predictors leverage pairwise relationships
+    by conditioning forecasts on graphs spanning the time series collection. The conditioning takes the
+    form of architectural inductive biases on the forecasting architecture, resulting in a family of models
+    called spatiotemporal graph neural networks. These biases allow for training global forecasting models
+    on large collections of time series while localizing predictions w.r.t. each element in the set (nodes)
+    by accounting for correlations among them (edges). Recent advances in graph neural networks and deep
+    learning for time series forecasting make the adoption of such processing framework appealing and
+    timely. However, most studies focus on refining existing architectures by exploiting modern deep-learning
+    practices. Conversely, foundational and methodological aspects have not been subject to systematic
+    investigation. To fill this void, this tutorial paper aims to introduce a comprehensive methodological
+    framework formalizing the forecasting problem and providing design principles for graph-based predictors,
+    as well as methods to assess their performance. In addition, together with an overview of the field,
+    we provide design guidelines and best practices, as well as an in-depth discussion of open challenges
+    and future directions.
+  bibtex: |-
+    @article{cini2025graph,
+      title = {{Graph Deep Learning for Time Series Forecasting}},
+      author = {Andrea Cini and Ivan Marisca and Daniele Zambon and Cesare Alippi},
+      journal = {ACM Computing Surveys},
+      year = {2025},
+      volume = {57},
+      number = {12},
+      pages = {1--34},
+      doi = {10.1145/3742784},
+      url = {https://doi.org/10.1145/3742784}
+    }
+- title: On the Regularization of Learnable Embeddings for Time Series Forecasting
+  authors: L. Butera, G. De Felice, A. Cini, C. Alippi
+  venue: TMLR
+  year: 2025
+  url: https://openreview.net/forum?id=F5ALCh3GWG
+  pdf: https://arxiv.org/pdf/2410.14630
+  code: https://github.com/LucaButera/TS-embedding-regularization
+  abstract: >-
+    In forecasting multiple time series, accounting for the individual features of each sequence can be
+    challenging. To address this, modern deep learning methods for time series analysis combine a shared
+    (global) model with local layers, specific to each time series, often implemented as learnable embeddings.
+    Ideally, these local embeddings should encode meaningful representations of the unique dynamics of
+    each sequence. However, when these are learned end-to-end as parameters of a forecasting model, they
+    may end up acting as mere sequence identifiers. Shared processing blocks may then become reliant on
+    such identifiers, limiting their transferability to new contexts. In this paper, we address this issue
+    by investigating methods to regularize the learning of local learnable embeddings for time series
+    processing. Specifically, we perform the first extensive empirical study on the subject and show how
+    such regularizations consistently improve performance in widely adopted architectures. Furthermore,
+    we show that methods attempting to prevent the co-adaptation of local and global parameters by means
+    of embeddings perturbation are particularly effective in this context. In this regard, we include
+    in the comparison several perturbation-based regularization methods, going as far as periodically
+    resetting the embeddings during training. The obtained results provide an important contribution to
+    understanding the interplay between learnable local parameters and shared processing layers: a key
+    challenge in modern time series processing models and a step toward developing effective foundation
+    models for time series.
+  bibtex: |-
+    @article{butera2025regularization,
+      title = {{On the Regularization of Learnable Embeddings for Time Series Forecasting}},
+      author = {Luca Butera and Giovanni De Felice and Andrea Cini and Cesare Alippi},
+      journal = {Transactions on Machine Learning Research},
+      year = {2025},
+      url = {https://openreview.net/forum?id=F5ALCh3GWG}
+    }
+- title: Mapping the Dynamics of Atrial Fibrillation with Spatiotemporal Graph Neural Networks
+  authors: A. Jenkins, A. Cini, J. Barker, D. Mandic, C. Alippi, F. S. Ng
+  venue: NeurIPS Workshop on Learning from Time Series for Health
+  year: 2025
+  url: https://openreview.net/forum?id=DFb0QJl4k1
+  pdf: https://openreview.net/pdf?id=DFb0QJl4k1
+  abstract: >-
+    Catheter ablation of persistent Atrial Fibrillation (AF) consists of a one-size-fits-all
+    treatment with limited success. This may be due to our inability to map AF electrical dynamics
+    on the atrial surface with the limited resolution and coverage provided by sequential contact
+    mapping catheters, preventing effective patient phenotyping for personalised, targeted ablation.
+    In this proof-of-concept study, we introduce FibMap, a graph recurrent neural network model that
+    reconstructs global AF dynamics from sparse measurements. Trained and validated on 51 non-contact
+    whole atria recordings, FibMap reconstructs whole atria dynamics from 10% surface coverage,
+    achieving a 210% lower mean absolute error and a 300% higher performance in recovering phase
+    singularities compared to baseline methods. Clinical utility of FibMap is demonstrated on
+    real-world contact mapping recordings, achieving reconstruction fidelity comparable to
+    non-contact mapping. Integrating FibMap into clinical practice could enable personalised AF care
+    and improve outcomes.
+  bibtex: |-
+    @inproceedings{jenkins2025mapping,
+      title = {{Mapping the Dynamics of Atrial Fibrillation with Spatiotemporal Graph Neural Networks}},
+      author = {Alexander Jenkins and Andrea Cini and Joseph Barker and Danilo Mandic and Cesare Alippi and Fu Siong Ng},
+      booktitle = {NeurIPS 2025 Workshop on Learning from Time Series for Health},
+      year = {2025},
+      url = {https://openreview.net/forum?id=DFb0QJl4k1}
+    }
+- title: Graph-based Virtual Sensing from Sparse and Partial Multivariate Observations
+  authors: G. De Felice, A. Cini, D. Zambon, V. Gusev, C. Alippi
+  venue: ICLR
+  year: 2024
+  url: https://openreview.net/forum?id=CAqdG2dy5s
+  pdf: https://arxiv.org/pdf/2402.12598
+  code: https://github.com/gdefe/ggnet-virtual-sensing
+  abstract: >-
+    Virtual sensing techniques allow for inferring signals at new unmonitored locations by exploiting
+    spatio-temporal measurements coming from physical sensors at different locations. However, as the
+    sensor coverage becomes sparse due to costs or other constraints, physical proximity cannot be used
+    to support interpolation. In this paper, we overcome this challenge by leveraging dependencies between
+    the target variable and a set of correlated variables (covariates) that can frequently be associated
+    with each location of interest. From this viewpoint, covariates provide partial observability, and
+    the problem consists of inferring values for unobserved channels by exploiting observations at other
+    locations to learn how such variables can correlate. We introduce a novel graph-based methodology
+    to exploit such relationships and design a graph deep learning architecture, named GgNet, implementing
+    the framework. The proposed approach relies on propagating information over a nested graph structure
+    that is used to learn dependencies between variables as well as locations. GgNet is extensively evaluated
+    under different virtual sensing scenarios, demonstrating higher reconstruction accuracy compared to
+    the state-of-the-art.
+  bibtex: |-
+    @inproceedings{defelice2024graph,
+      title = {{Graph-based Virtual Sensing from Sparse and Partial Multivariate Observations}},
+      author = {Giovanni De Felice and Andrea Cini and Daniele Zambon and Vladimir V. Gusev and Cesare Alippi},
+      booktitle = {International Conference on Learning Representations},
+      year = {2024},
+      url = {https://openreview.net/forum?id=CAqdG2dy5s}
+    }
+- title: Graph-based Time Series Clustering for End-to-End Hierarchical Forecasting
+  authors: A. Cini, D. Mandic, C. Alippi
+  venue: ICML
+  year: 2024
+  url: https://openreview.net/forum?id=nd47Za5jk5
+  pdf: https://arxiv.org/pdf/2305.19183
+  code: https://github.com/andreacini/higp
+  abstract: >-
+    Relationships among time series can be exploited as inductive biases in learning effective forecasting
+    models. In hierarchical time series, relationships among subsets of sequences induce hard constraints
+    (hierarchical inductive biases) on the predicted values. In this paper, we propose a graph-based methodology
+    to unify relational and hierarchical inductive biases in the context of deep learning for time series
+    forecasting. In particular, we model both types of relationships as dependencies in a pyramidal graph
+    structure, with each pyramidal layer corresponding to a level of the hierarchy. By exploiting modern
+    - trainable - graph pooling operators we show that the hierarchical structure, if not available as
+    a prior, can be learned directly from data, thus obtaining cluster assignments aligned with the forecasting
+    objective. A differentiable reconciliation stage is incorporated into the processing architecture,
+    allowing hierarchical constraints to act both as an architectural bias as well as a regularization
+    element for predictions. Simulation results on representative datasets show that the proposed method
+    compares favorably against the state of the art.
+  bibtex: |-
+    @inproceedings{cini2024graph,
+      title = {{Graph-based Time Series Clustering for End-to-End Hierarchical Forecasting}},
+      author = {Cini, Andrea and Mandic, Danilo and Alippi, Cesare},
+      booktitle = {Proceedings of the 41st International Conference on Machine Learning},
+      pages = {8985--8999},
+      year = {2024},
+      volume = {235},
+      series = {Proceedings of Machine Learning Research},
+      publisher = {PMLR},
+      url = {https://proceedings.mlr.press/v235/cini24a.html}
+    }
+- title: Feudal Graph Reinforcement Learning
+  authors: T. Marzi, A. S. Khehra, A. Cini, C. Alippi
+  venue: TMLR
+  year: 2024
+  url: https://openreview.net/forum?id=wFcyJTik90
+  pdf: https://arxiv.org/pdf/2304.05099
+  code: https://github.com/tommasomarzi/fgrl
+  abstract: >-
+    Graph-based representations and message-passing modular policies constitute prominent approaches to
+    tackling composable control problems in reinforcement learning (RL). However, as shown by recent graph
+    deep learning literature, such local message-passing operators can create information bottlenecks
+    and hinder global coordination. The issue becomes more serious in tasks requiring high-level planning.
+    In this work, we propose a novel methodology, named Feudal Graph Reinforcement Learning (FGRL), that
+    addresses such challenges by relying on hierarchical RL and a pyramidal message-passing architecture.
+    In particular, FGRL defines a hierarchy of policies where high-level commands are propagated from
+    the top of the hierarchy down through a layered graph structure. The bottom layers mimic the morphology
+    of the physical system, while the upper layers correspond to higher-order sub-modules. The resulting
+    agents are then characterized by a committee of policies where actions at a certain level set goals
+    for the level below, thus implementing a hierarchical decision-making structure that can naturally
+    implement task decomposition. We evaluate the proposed framework on a graph clustering problem and
+    MuJoCo locomotion tasks; simulation results show that FGRL compares favorably against relevant baselines.
+    Furthermore, an in-depth analysis of the command propagation mechanism provides evidence that the
+    introduced message-passing scheme favors learning hierarchical decision-making policies.
+  bibtex: |-
+    @article{marzi2024feudal,
+      title = {{Feudal Graph Reinforcement Learning}},
+      author = {Tommaso Marzi and Arshjot Singh Khehra and Andrea Cini and Cesare Alippi},
+      journal = {Transactions on Machine Learning Research},
+      year = {2024},
+      url = {https://openreview.net/forum?id=wFcyJTik90}
+    }
+- title: Object-Centric Relational Representations for Image Generation
+  authors: L. Butera, A. Cini, A. Ferrante, C. Alippi
+  venue: TMLR
+  year: 2024
+  url: https://openreview.net/forum?id=7kWjB9zW90
+  pdf: https://arxiv.org/pdf/2303.14681
+  code: https://github.com/LucaButera/graphose_ocrrig
+  abstract: >-
+    Conditioning image generation on specific features of the desired output is a key ingredient of modern
+    generative models. However, existing approaches lack a general and unified way of representing structural
+    and semantic conditioning at diverse granularity levels. This paper explores a novel method to condition
+    image generation, based on object-centric relational representations. In particular, we propose a
+    methodology to condition the generation of objects in an image on the attributed graph representing
+    their structure and the associated semantic information. We show that such architectural biases entail
+    properties that facilitate the manipulation and conditioning of the generative process and allow for
+    regularizing the training procedure. The proposed conditioning framework is implemented by means of
+    a neural network that learns to generate a 2D, multi-channel, layout mask of the objects, which can
+    be used as a soft inductive bias in the downstream generative task. To do so, we leverage both 2D
+    and graph convolutional operators. We also propose a novel benchmark for image generation consisting
+    of a synthetic dataset of images paired with their relational representation. Empirical results show
+    that the proposed approach compares favorably against relevant baselines.
+  bibtex: |-
+    @article{butera2024object,
+      title = {{Object-Centric Relational Representations for Image Generation}},
+      author = {Luca Butera and Andrea Cini and Alberto Ferrante and Cesare Alippi},
+      journal = {Transactions on Machine Learning Research},
+      year = {2024},
+      url = {https://openreview.net/forum?id=7kWjB9zW90}
+    }
+- title: Taming Local Effects in Graph-based Spatiotemporal Forecasting
+  authors: A. Cini, I. Marisca, D. Zambon, C. Alippi
+  venue: NeurIPS
+  year: 2023
+  url: https://openreview.net/forum?id=x2PH6q32LR
+  pdf: https://arxiv.org/pdf/2302.04071
+  code: https://github.com/Graph-Machine-Learning-Group/taming-local-effects-stgnns
+  abstract: >-
+    Spatiotemporal graph neural networks have shown to be effective in time series forecasting applications,
+    achieving better performance than standard univariate predictors in several settings. These architectures
+    take advantage of a graph structure and relational inductive biases to learn a single (global) inductive
+    model to predict any number of the input time series, each associated with a graph node. Despite the
+    gain achieved in computational and data efficiency w.r.t. fitting a set of local models, relying on
+    a single global model can be a limitation whenever some of the time series are generated by a different
+    spatiotemporal stochastic process. The main objective of this paper is to understand the interplay
+    between globality and locality in graph-based spatiotemporal forecasting, while contextually proposing
+    a methodological framework to rationalize the practice of including trainable node embeddings in such
+    architectures. We ascribe to trainable node embeddings the role of amortizing the learning of specialized
+    components. Moreover, embeddings allow for 1) effectively combining the advantages of shared message-passing
+    layers with node-specific parameters and 2) efficiently transferring the learned model to new node
+    sets. Supported by strong empirical evidence, we provide insights and guidelines for specializing
+    graph-based models to the dynamics of each time series and show how this aspect plays a crucial role
+    in obtaining accurate predictions.
+  bibtex: |-
+    @inproceedings{cini2023taming,
+      title = {{Taming Local Effects in Graph-based Spatiotemporal Forecasting}},
+      author = {Andrea Cini and Ivan Marisca and Daniele Zambon and Cesare Alippi},
+      booktitle = {Advances in Neural Information Processing Systems 36},
+      year = {2023},
+      pages = {55375--55393},
+      doi = {10.52202/075280-2417},
+      url = {https://openreview.net/forum?id=x2PH6q32LR}
+    }
+- title: Scalable Spatiotemporal Graph Neural Networks
+  authors: A. Cini, I. Marisca, F. M. Bianchi, C. Alippi
+  venue: AAAI
+  year: 2023
+  url: https://ojs.aaai.org/index.php/AAAI/article/view/25880
+  pdf: https://arxiv.org/pdf/2209.06520
+  code: https://github.com/Graph-Machine-Learning-Group/sgp
+  abstract: >-
+    Neural forecasting of spatiotemporal time series drives both research and industrial innovation in
+    several relevant application domains. Graph neural networks (GNNs) are often the core component of
+    the forecasting architecture. However, in most spatiotemporal GNNs, the computational complexity scales
+    up to a quadratic factor with the length of the sequence times the number of links in the graph, hence
+    hindering the application of these models to large graphs and long temporal sequences. While methods
+    to improve scalability have been proposed in the context of static graphs, few research efforts have
+    been devoted to the spatiotemporal case. To fill this gap, we propose a scalable architecture that
+    exploits an efficient encoding of both temporal and spatial dynamics. In particular, we use a randomized
+    recurrent neural network to embed the history of the input time series into high-dimensional state
+    representations encompassing multi-scale temporal dynamics. Such representations are then propagated
+    along the spatial dimension using different powers of the graph adjacency matrix to generate node
+    embeddings characterized by a rich pool of spatiotemporal features. The resulting node embeddings
+    can be efficiently pre-computed in an unsupervised manner, before being fed to a feed-forward decoder
+    that learns to map the multi-scale spatiotemporal representations to predictions. The training procedure
+    can then be parallelized node-wise by sampling the node embeddings without breaking any dependency,
+    thus enabling scalability to large networks. Empirical results on relevant datasets show that our
+    approach achieves results competitive with the state of the art, while dramatically reducing the computational
+    burden.
+  bibtex: |-
+    @inproceedings{cini2023scalable,
+      title = {{Scalable Spatiotemporal Graph Neural Networks}},
+      author = {Andrea Cini and Ivan Marisca and Filippo Maria Bianchi and Cesare Alippi},
+      booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+      year = {2023},
+      volume = {37},
+      number = {6},
+      pages = {7218--7226},
+      doi = {10.1609/aaai.v37i6.25880},
+      url = {https://ojs.aaai.org/index.php/AAAI/article/view/25880}
+    }
+- title: Sparse Graph Learning from Spatiotemporal Time Series
+  authors: A. Cini, D. Zambon, C. Alippi
+  venue: JMLR
+  year: 2023
+  url: http://jmlr.org/papers/v24/22-1154.html
+  pdf: https://jmlr.org/papers/volume24/22-1154/22-1154.pdf
+  code: https://github.com/andreacini/sparse-graph-learning
+  abstract: >-
+    Outstanding achievements of graph neural networks for spatiotemporal time series analysis show that
+    relational constraints introduce an effective inductive bias into neural forecasting architectures.
+    Often, however, the relational information characterizing the underlying data-generating process is
+    unavailable and the practitioner is left with the problem of inferring from data which relational
+    graph to use in the subsequent processing stages. We propose novel, principled - yet practical - probabilistic
+    score-based methods that learn the relational dependencies as distributions over graphs while maximizing
+    end-to-end the performance at task. The proposed graph learning framework is based on consolidated
+    variance reduction techniques for Monte Carlo score-based gradient estimation, is theoretically grounded,
+    and, as we show, effective in practice. In this paper, we focus on the time series forecasting problem
+    and show that, by tailoring the gradient estimators to the graph learning problem, we are able to
+    achieve state-of-the-art performance while controlling the sparsity of the learned graph and the computational
+    scalability. We empirically assess the effectiveness of the proposed method on synthetic and real-world
+    benchmarks, showing that the proposed solution can be used as a stand-alone graph identification procedure
+    as well as a graph learning component of an end-to-end forecasting architecture.
+  bibtex: |-
+    @article{JMLR:v24:22-1154,
+      author  = {Andrea Cini and Daniele Zambon and Cesare Alippi},
+      title   = {Sparse Graph Learning from Spatiotemporal Time Series},
+      journal = {Journal of Machine Learning Research},
+      year    = {2023},
+      volume  = {24},
+      number  = {242},
+      pages   = {1--36},
+      url     = {http://jmlr.org/papers/v24/22-1154.html}
+    }
+- title: 'Peak Shaving in Distribution Networks Using Stationary Energy Storage Systems: A Swiss Case
+    Study'
+  authors: N. A. Efkarpidis, S. Imoscopi, M. Geidl, A. Cini, S. Lukovic, C. Alippi, I. Herbst
+  venue: Sustainable Energy, Grids and Networks
+  year: 2023
+  url: https://www.sciencedirect.com/science/article/pii/S2352467723000267
+  pdf: https://www.sciencedirect.com/science/article/pii/S2352467723000267/pdfft
+  abstract: >-
+    Large-scale customers and grid operators are charged not only by their total energy demand, but also
+    by their highest power demand. The maximum demand charge is usually imposed on the peak power point
+    of the monthly load profile, hence, shaving demand at peak times is of main concern for the aforesaid
+    stakeholders. In this paper, we present an approach for peak shaving in a distribution grid using
+    a battery energy storage. The developed algorithm is applied and tested with data from a real stationary
+    battery installation at a Swiss utility. This paper proposes a battery storage control scheme that
+    can be used for peak shaving of the total grid load under real-time conditions. Particularly, a rule-based
+    approach combined with a deep-learning load forecasting model is developed and its performance is
+    compared with the theoretical optimum based on real load data. The analysis includes both technical
+    and economical results from a simulated storage operation and significant outcomes are given for the
+    application of this method.
+  bibtex: |-
+    @article{efkarpidis2023peak,
+      title = {{Peak Shaving in Distribution Networks Using Stationary Energy Storage Systems: A Swiss Case Study}},
+      author = {Nikolaos A. Efkarpidis and Stefano Imoscopi and Martin Geidl and Andrea Cini and Slobodan Lukovic and Cesare Alippi and Ingo Herbst},
+      journal = {Sustainable Energy, Grids and Networks},
+      year = {2023},
+      volume = {34},
+      pages = {101018},
+      doi = {10.1016/j.segan.2023.101018},
+      url = {https://www.sciencedirect.com/science/article/pii/S2352467723000267}
+    }
+- title: Learning to Reconstruct Missing Data from Spatiotemporal Graphs with Sparse Observations
+  authors: I. Marisca, A. Cini, C. Alippi
+  venue: NeurIPS
+  year: 2022
+  url: https://doi.org/10.52202/068431-2324
+  pdf: https://arxiv.org/pdf/2205.13479
+  code: https://github.com/Graph-Machine-Learning-Group/spin
+  abstract: >-
+    Modeling multivariate time series as temporal signals over a (possibly dynamic) graph is an effective
+    representational framework that allows for developing models for time series analysis. In fact, discrete
+    sequences of graphs can be processed by autoregressive graph neural networks to recursively learn
+    representations at each discrete point in time and space. Spatiotemporal graphs are often highly sparse,
+    with time series characterized by multiple, concurrent, and long sequences of missing data, e.g.,
+    due to the unreliable underlying sensor network. In this context, autoregressive models can be brittle
+    and exhibit unstable learning dynamics. The objective of this paper is, then, to tackle the problem
+    of learning effective models to reconstruct, i.e., impute, missing data points by conditioning the
+    reconstruction only on the available observations. In particular, we propose a novel class of attention-based
+    architectures that, given a set of highly sparse discrete observations, learn a representation for
+    points in time and space by exploiting a spatiotemporal propagation architecture aligned with the
+    imputation task. Representations are trained end-to-end to reconstruct observations w.r.t. the corresponding
+    sensor and its neighboring nodes. Compared to the state of the art, our model handles sparse data
+    without propagating prediction errors or requiring a bidirectional model to encode forward and backward
+    time dependencies. Empirical results on representative benchmarks show the effectiveness of the proposed
+    method.
+  bibtex: |-
+    @inproceedings{marisca2022learning,
+      title = {{Learning to Reconstruct Missing Data from Spatiotemporal Graphs with Sparse Observations}},
+      author = {Ivan Marisca and Andrea Cini and Cesare Alippi},
+      booktitle = {Advances in Neural Information Processing Systems 35},
+      year = {2022},
+      pages = {32069--32082},
+      doi = {10.52202/068431-2324},
+      url = {https://doi.org/10.52202/068431-2324}
+    }
+- title: Spatio-Temporal Graph Neural Networks for Aggregate Load Forecasting
+  authors: S. Eandi, A. Cini, S. Lukovic, C. Alippi
+  venue: IJCNN
+  year: 2022
+  url: https://ieeexplore.ieee.org/document/9892780
+  pdf: /assets/pdf/eandi2022spatio.pdf
+  abstract: >-
+    Accurate forecasting of electricity demand is a core component of the modern electricity infrastructure.
+    Several approaches exist that tackle this problem by exploiting modern deep learning tools. However,
+    most previous works focus on predicting the total load as a univariate time series forecasting task,
+    ignoring all fine-grained information captured by the smart meters distributed across the power grid.
+    We introduce a methodology to account for this information in the graph neural network framework.
+    In particular, we consider spatio-temporal graphs where each node is associated with the aggregate
+    load of a cluster of smart meters, and a global graph-level attribute indicates the total load on
+    the grid. We propose two novel spatio-temporal graph neural network models to process this representation
+    and take advantage of both the finer-grained information and the relationships existing between the
+    different clusters of meters. We compare these models on a widely used, openly available, benchmark
+    against a competitive baseline which only accounts for the total load profile. Within these settings,
+    we show that the proposed methodology improves forecasting accuracy.
+  bibtex: |-
+    @inproceedings{eandi2022spatio,
+      title = {{Spatio-Temporal Graph Neural Networks for Aggregate Load Forecasting}},
+      author = {Simone Eandi and Andrea Cini and Slobodan Lukovic and Cesare Alippi},
+      booktitle = {2022 International Joint Conference on Neural Networks (IJCNN)},
+      year = {2022},
+      pages = {1--8},
+      doi = {10.1109/ijcnn55064.2022.9892780},
+      url = {https://ieeexplore.ieee.org/document/9892780}
+    }
+- title: 'Filling the G_ap_s: Multivariate Time Series Imputation by Graph Neural Networks'
+  authors: A. Cini, I. Marisca, C. Alippi
+  venue: ICLR
+  year: 2022
+  url: https://openreview.net/forum?id=kOu3-S3wJ7
+  pdf: https://arxiv.org/pdf/2108.00298
+  code: https://github.com/Graph-Machine-Learning-Group/grin
+  abstract: >-
+    Dealing with missing values and incomplete time series is a labor-intensive, tedious, inevitable task
+    when handling data coming from real-world applications. Effective spatio-temporal representations
+    would allow imputation methods to reconstruct missing temporal data by exploiting information coming
+    from sensors at different locations. However, standard methods fall short in capturing the nonlinear
+    time and space dependencies existing within networks of interconnected sensors and do not take full
+    advantage of the available - and often strong - relational information. Notably, most state-of-the-art
+    imputation methods based on deep learning do not explicitly model relational aspects and, in any case,
+    do not exploit processing frameworks able to adequately represent structured spatio-temporal data.
+    Conversely, graph neural networks have recently surged in popularity as both expressive and scalable
+    tools for processing sequential data with relational inductive biases. In this work, we present the
+    first assessment of graph neural networks in the context of multivariate time series imputation. In
+    particular, we introduce a novel graph neural network architecture, named GRIN, which aims at reconstructing
+    missing data in the different channels of a multivariate time series by learning spatio-temporal representations
+    through message passing. Empirical results show that our model outperforms state-of-the-art methods
+    in the imputation task on relevant real-world benchmarks with mean absolute error improvements often
+    higher than 20%.
+  bibtex: |-
+    @inproceedings{cini2022filling,
+      title = {{Filling the G\_ap\_s: Multivariate Time Series Imputation by Graph Neural Networks}},
+      author = {Andrea Cini and Ivan Marisca and Cesare Alippi},
+      booktitle = {International Conference on Learning Representations},
+      year = {2022},
+      url = {https://openreview.net/forum?id=kOu3-S3wJ7}
+    }
+- title: Deep Reinforcement Learning with Weighted Q-Learning
+  authors: A. Cini, C. D'Eramo, J. Peters, C. Alippi
+  venue: RLDM
+  year: 2022
+  url: https://arxiv.org/abs/2003.09280
+  pdf: https://arxiv.org/pdf/2003.09280
+  abstract: >-
+    Reinforcement learning algorithms based on Q-learning are driving Deep Reinforcement Learning (DRL)
+    research towards solving complex problems and achieving super-human performance on many of them. Nevertheless,
+    Q-Learning is known to be positively biased since it learns by using the maximum over noisy estimates
+    of expected values. Systematic overestimation of the action values coupled with the inherently high
+    variance of DRL methods can lead to incrementally accumulate errors, causing learning algorithms to
+    diverge. Ideally, we would like DRL agents to take into account their own uncertainty about the optimality
+    of each action, and be able to exploit it to make more informed estimations of the expected return.
+    In this regard, Weighted Q-Learning (WQL) effectively reduces bias and shows remarkable results in
+    stochastic environments. WQL uses a weighted sum of the estimated action values, where the weights
+    correspond to the probability of each action value being the maximum; however, the computation of
+    these probabilities is only practical in the tabular setting. In this work, we provide methodological
+    advances to benefit from the WQL properties in DRL, by using neural networks trained with Dropout
+    as an effective approximation of deep Gaussian processes. In particular, we adopt the Concrete Dropout
+    variant to obtain calibrated estimates of epistemic uncertainty in DRL. The estimator, then, is obtained
+    by taking several stochastic forward passes through the action-value network and computing the weights
+    in a Monte Carlo fashion. Such weights are Bayesian estimates of the probability of each action value
+    corresponding to the maximum w.r.t. a posterior probability distribution estimated by Dropout. We
+    show how our novel Deep Weighted Q-Learning algorithm reduces the bias w.r.t. relevant baselines and
+    provides empirical evidence of its advantages on representative benchmarks.
+  bibtex: |-
+    @inproceedings{cini2022deep,
+      title = {{Deep Reinforcement Learning with Weighted Q-Learning}},
+      author = {Andrea Cini and Carlo D'Eramo and Jan Peters and Cesare Alippi},
+      booktitle = {The Multi-disciplinary Conference on Reinforcement Learning and Decision Making (RLDM)},
+      year = {2022},
+      url = {https://arxiv.org/abs/2003.09280}
+    }
+- title: Graph Neural Networks for High-Level Synthesis Design Space Exploration
+  authors: L. Ferretti, A. Cini, G. Zacharopoulos, C. Alippi, L. Pozzi
+  venue: ACM TODAES
+  year: 2022
+  url: https://doi.org/10.1145/3570925
+  abstract: >-
+    High-level Synthesis (HLS) Design-Space Exploration (DSE) aims at identifying Pareto-optimal synthesis
+    configurations whose exhaustive search is unfeasible due to the design-space dimensionality and the
+    prohibitive computational cost of the synthesis process. Within this framework, we address the design
+    automation problem by proposing graph neural networks that jointly predict acceleration performance
+    and hardware costs of a synthesized behavioral specification given optimization directives. Learned
+    models can be used to rapidly approach the Pareto curve by guiding the DSE, taking into account performance
+    and cost estimates. The proposed method outperforms traditional HLS-driven DSE approaches, by accounting
+    for the arbitrary length of computer programs and the invariant properties of the input. We propose
+    a novel hybrid control and dataflow graph representation that enables training the graph neural network
+    on specifications of different hardware accelerators. Our approach achieves prediction accuracy comparable
+    with that of state-of-the-art simulators without having access to analytical models of the HLS compiler.
+    Finally, the learned representation can be exploited for DSE in unexplored configuration spaces by
+    fine-tuning on a small number of samples from the new target domain. The outcome of the empirical
+    evaluation of this transfer learning shows strong results against state-of-the-art baselines in relevant
+    benchmarks.
+  bibtex: |-
+    @article{ferretti2022graph,
+      title = {{Graph Neural Networks for High-Level Synthesis Design Space Exploration}},
+      author = {Lorenzo Ferretti and Andrea Cini and Georgios Zacharopoulos and Cesare Alippi and Laura Pozzi},
+      journal = {ACM Transactions on Design Automation of Electronic Systems},
+      year = {2022},
+      volume = {28},
+      number = {2},
+      pages = {1--20},
+      doi = {10.1145/3570925},
+      url = {https://doi.org/10.1145/3570925}
+    }
+- title: Gaussian Approximation for Bias Reduction in Q-Learning
+  authors: C. D'Eramo, A. Cini, A. Nuara, M. Pirotta, C. Alippi, J. Peters, M. Restelli
+  venue: JMLR
+  year: 2021
+  url: http://jmlr.org/papers/v22/20-633.html
+  pdf: https://jmlr.org/papers/volume22/20-633/20-633.pdf
+  abstract: >-
+    Temporal-Difference off-policy algorithms are among the building blocks of reinforcement learning
+    (RL). Within this family, Q-Learning is arguably the most famous one, which has been widely studied
+    and extended. The update rule of Q-learning involves the use of the maximum operator to estimate the
+    maximum expected value of the return. However, this estimate is positively biased, and may hinder
+    the learning process, especially in stochastic environments and when function approximation is used.
+    We introduce the Weighted Estimator as an effective solution to mitigate the negative effects of overestimation
+    in Q-Learning. The Weighted Estimator estimates the maximum expected value as a weighted sum of the
+    action values, with the weights being the probabilities that each action value is the maximum. In
+    this work, we study the problem from the statistical perspective of estimating the maximum expected
+    value of a set of random variables and provide bounds to the bias and the variance of the Weighted
+    Estimator, showing its advantages over other estimators present in literature. Then, we derive algorithms
+    to enable the use of the Weighted Estimator, in place of the Maximum Estimator, in online and batch
+    RL, and we introduce a novel algorithm for deep RL. Finally, we empirically evaluate our algorithms
+    in a large set of heterogeneous problems, encompassing discrete and continuous, low and high dimensional,
+    deterministic and stochastic environments. Experimental results show the effectiveness of the Weighted
+    Estimator in controlling the bias of the estimate, resulting in better performance than representative
+    baselines and robust learning w.r.t. a large set of diverse environments.
+  bibtex: |-
+    @article{JMLR:v22:20-633,
+      author  = {Carlo D'Eramo and Andrea Cini and Alessandro Nuara and Matteo Pirotta and Cesare Alippi and Jan Peters and Marcello Restelli},
+      title   = {Gaussian Approximation for Bias Reduction in Q-Learning},
+      journal = {Journal of Machine Learning Research},
+      year    = {2021},
+      volume  = {22},
+      number  = {277},
+      pages   = {1--51},
+      url     = {http://jmlr.org/papers/v22/20-633.html}
+    }
+- title: Deep Reinforcement Learning Policies for Underactuated Satellite Attitude Control
+  authors: M. E. Hariry, A. Cini, G. Mellone, A. Balossino
+  venue: NeurIPS Workshop on Deployable Decision-Making in Embodied Systems
+  year: 2021
+  url: https://arxiv.org/abs/2505.00165
+  pdf: https://arxiv.org/pdf/2505.00165
+  abstract: >-
+    Autonomy is a key challenge for future space exploration endeavours. Deep Reinforcement Learning holds
+    the promises for developing agents able to learn complex behaviours simply by interacting with their
+    environment. This paper investigates the use of Reinforcement Learning for the satellite attitude
+    control problem, namely the angular reorientation of a spacecraft with respect to an in- ertial frame
+    of reference. In the proposed approach, a set of control policies are implemented as neural networks
+    trained with a custom version of the Proximal Policy Optimization algorithm to maneuver a small satellite
+    from a random starting angle to a given pointing target. In particular, we address the problem for
+    two working conditions: the nominal case, in which all the actuators (a set of 3 reac- tion wheels)
+    are working properly, and the underactuated case, where an actuator failure is simulated randomly
+    along with one of the axes. We show that the agents learn to effectively perform large-angle slew
+    maneuvers with fast convergence and industry-standard pointing accuracy. Furthermore, we test the
+    proposed method on representative hardware, showing that by taking adequate measures controllers trained
+    in simulation can perform well in real systems.
+  bibtex: |-
+    @inproceedings{hariry2021deep,
+      title = {{Deep Reinforcement Learning Policies for Underactuated Satellite Attitude Control}},
+      author = {Matteo El Hariry and Andrea Cini and Giacomo Mellone and Alessandro Balossino},
+      booktitle = {NeurIPS 2021 Workshop on Deployable Decision-Making in Embodied Systems},
+      year = {2021},
+      url = {https://arxiv.org/abs/2505.00165}
+    }
+- title: Cluster-based Aggregate Load Forecasting with Deep Neural Networks
+  authors: A. Cini, S. Lukovic, C. Alippi
+  venue: IJCNN
+  year: 2020
+  url: https://ieeexplore.ieee.org/document/9207503/
+  pdf: /assets/pdf/cini2020cluster.pdf
+  abstract: >-
+    Highly accurate power demand forecasting represents one of key challenges of Smart Grid applications.
+    In this setting, a large number of Smart Meters produces huge amounts of data that need to be processed
+    to predict the load requested by the grid. Due to the high dimensionality of the problem, this often
+    results in the adoption of simple aggregation strategies for the power that fail in capturing the
+    relational information existing among the different types of user. A possible alternative, known as
+    Cluster-based Aggregate Forecasting, consists in clustering the load profiles and, on top of that,
+    building predictors of the aggregate at the cluster-level. In this work we explore the technique in
+    the context of predictors based on deep recurrent neural networks and address the scalability issues
+    presenting neural architectures adequate to process cluster-level aggregates. The proposed methods
+    are finally evaluated both on a publicly available benchmark and a heterogenous dataset of Smart Meter
+    data from an entire, medium-sized, Swiss town.
+  bibtex: |-
+    @inproceedings{cini2020cluster,
+      title = {{Cluster-based Aggregate Load Forecasting with Deep Neural Networks}},
+      author = {Andrea Cini and Slobodan Lukovic and Cesare Alippi},
+      booktitle = {2020 International Joint Conference on Neural Networks (IJCNN)},
+      year = {2020},
+      pages = {1--8},
+      doi = {10.1109/ijcnn48605.2020.9207503},
+      url = {https://ieeexplore.ieee.org/document/9207503/}
+    }
+- title: Exploiting Action-Value Uncertainty to Drive Exploration in Reinforcement Learning
+  authors: C. D'Eramo, A. Cini, M. Restelli
+  venue: IJCNN
+  year: 2019
+  url: https://ieeexplore.ieee.org/document/8852326
+  abstract: >-
+    Most of the research in Reinforcement Learning (RL) focuses on balancing exploration and exploitation.
+    Indeed, the reasons for the success or failure of an RL algorithm often deal with the choice between
+    the execution of exploratory actions and the exploitation of actions that are known to be good. In
+    the context of Multi-Armed Bandits (MABs), many algorithms have addressed this dilemma. In particular,
+    Thompson Sampling (TS) is a solution that, besides having good theoretical properties, usually works
+    very well in practice. Unfortunately, the success of TS in MAB problems has not been replicated in
+    RL, where it has shown to scale very poorly w.r.t. the dimensionality of the problem. Nevertheless,
+    the application of TS in RL, instead of more myopic strategies such as ε-greedy, remains a promising
+    solution. This paper addresses such issue proposing several algorithms to use TS in RL and deep RL
+    in a feasible way. We present these algorithms explaining the intuitions and theoretical considerations
+    behind them and discussing their advantages and drawbacks. Furthermore, we provide an empirical evaluation
+    on an increasingly complex set of RL problems, showing the benefit of TS w.r.t. other sampling strategies
+    available in classical and more recent RL literature.
+  bibtex: |-
+    @inproceedings{deramo2019exploiting,
+      title = {{Exploiting Action-Value Uncertainty to Drive Exploration in Reinforcement Learning}},
+      author = {Carlo D'Eramo and Andrea Cini and Marcello Restelli},
+      booktitle = {2019 International Joint Conference on Neural Networks (IJCNN)},
+      year = {2019},
+      pages = {1--8},
+      doi = {10.1109/ijcnn.2019.8852326},
+      url = {https://ieeexplore.ieee.org/document/8852326}
+    }
+- title: Graph Deep Learning for Time Series Forecasting
+  authors: A. Cini
+  venue: PhD thesis, Università della Svizzera italiana
+  year: 2024
+  type: thesis
+  url: https://roar.hep-bejune.ch/usi/documents/334110
+  pdf: https://roar.hep-bejune.ch/documents/334110/preview/2024INF019.pdf
+  abstract: >-
+    Neural networks have been used to forecast time series for decades. One of the key elements enabling
+    most of the field's recent achievements is the training of a single neural network on large
+    collections of related time series. This approach, however, often considers each time series
+    independently from the others and, consequently, discards dependencies that might be instrumental
+    for accurate predictions. Nonetheless, the alternative of modeling the full collection as a large
+    multivariate time series cannot scale as it does not exploit the structure of the data to reduce
+    computational and sample complexity. In this research, we aim to address the shortcomings of the
+    state of the art in correlated time series forecasting by relying on graph representations and graph
+    deep learning methods. We propose graph-based predictors that model pairwise relationships among
+    time series by conditioning forecasts on a (possibly dynamic) graph spanning the collection. The
+    conditioning is implemented as an architectural bias directly embedded into the processing; as we
+    will show, this inductive bias enables the training of global forecasting models on large sensor
+    networks by accounting for local correlations (graph edges) among time series (graph nodes). Our
+    research introduces a comprehensive methodological framework characterizing the family of these
+    predictive models and provides design principles for graph-based forecasting. Within this context,
+    we propose methods to tackle the inherent challenges of the field, i.e., dealing with missing data,
+    sparse observations, local effects, and latent relational dependencies. The computational
+    scalability of the proposed framework is also addressed, together with methodologies enabling
+    transfer learning and hierarchical forecasting. Extensive empirical results validate the introduced
+    methodologies and place graph deep learning methods among the most important tools available in
+    modern forecasting.
+  bibtex: |-
+    @phdthesis{cini2024phdthesis,
+      title = {Graph Deep Learning for Time Series Forecasting},
+      author = {Cini, Andrea},
+      school = {Universit\`a della Svizzera italiana},
+      year = {2024},
+      url = {https://n2t.net/ark:/12658/srd1334110}
+    }

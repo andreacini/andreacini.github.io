@@ -1,0 +1,32 @@
+{%- assign p = include.pub -%}
+{%- assign id = include.id -%}
+<li class="pub">
+  <div class="pub-title">
+    {%- if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif -%}
+  </div>
+  <div class="pub-authors">{{ p.authors | replace: "A. Cini", "<strong>A. Cini</strong>" }}</div>
+  <div class="pub-venue">{{ p.venue }} {{ p.year }}</div>
+  <div class="pub-actions">
+    {%- if p.abstract %}
+    <button type="button" aria-expanded="false" aria-controls="abs-{{ id }}">Abstract</button>
+    {%- endif %}
+    {%- if p.pdf %}
+    <a href="{% if p.pdf contains '://' %}{{ p.pdf }}{% else %}{{ p.pdf | relative_url }}{% endif %}">PDF</a>
+    {%- endif %}
+    {%- if p.bibtex %}
+    <button type="button" aria-expanded="false" aria-controls="bib-{{ id }}">BibTeX</button>
+    {%- endif %}
+    {%- if p.code %}
+    <a href="{{ p.code }}">Code</a>
+    {%- endif %}
+  </div>
+  {%- if p.abstract %}
+  <p class="pub-panel pub-abstract" id="abs-{{ id }}" hidden>{{ p.abstract }}</p>
+  {%- endif %}
+  {%- if p.bibtex %}
+  <div class="pub-panel pub-bibtex" id="bib-{{ id }}" hidden>
+    <button type="button" class="pub-copy">Copy</button>
+    <pre><code>{{ p.bibtex | escape }}</code></pre>
+  </div>
+  {%- endif %}
+</li>

@@ -1,0 +1,15 @@
+# Research projects, rendered on /projects/.
+
+- name: Relational Deep Learning for Reliable Time Series Forecasting at Scale
+  logo: /assets/img/snsf_logo.svg
+  role: PI · <a href="https://www.snf.ch/en">Swiss National Science Foundation</a> · 2025–2027
+  description: >-
+    Graph deep learning methods forecast collections of related time series by accounting for the
+    relationships among them, but they operate at a single spatiotemporal scale, which makes it hard
+    to capture long-range dependencies and multi-scale dynamics. This project designs hierarchical
+    relational forecasting models that process clusters of time series at adaptive spatial and
+    temporal resolutions, together with scalable neural operators and uncertainty quantification
+    methods, with applications in energy analytics and healthcare.
+  links:
+    - title: SNSF Data Portal
+      url: https://data.snf.ch/grants/grant/225351

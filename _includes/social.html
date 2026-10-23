@@ -1,57 +1,25 @@
-            {%- if site.email -%}
-            <a href="mailto:{{ site.email | encode_email }}" title="email"><i class="fas fa-envelope"></i></a>
-            {% endif %}
-            {%- if site.orcid_id -%}
-            <a href="https://orcid.org/{{ site.orcid_id }}" title="ORCID"><i class="ai ai-orcid"></i></a>
-            {% endif %}
-            {%- if site.scholar_userid -%}
-            <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-            {% endif %}
-            {%- if site.publons_id -%}
-            <a href="https://publons.com/a/{{ site.publons_id }}/" title="Publons"><i class="ai ai-publons"></i></a>
-            {% endif %}
-            {%- if site.research_gate_profile -%}
-            <a href="https://www.researchgate.net/profile/{{site.research_gate_profile}}/" title="ResearchGate"><i class="ai ai-researchgate"></i></a>
-            {% endif %}
-            {%- if site.github_username -%}
-            <a href="https://github.com/{{ site.github_username }}" title="GitHub"><i class="fab fa-github"></i></a>
-            {% endif %}
-            {%- if site.linkedin_username -%}
-            <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            {% endif %}
-            {%- if site.twitter_username -%}
-            <a href="https://twitter.com/{{ site.twitter_username }}" title="Twitter"><i class="fab fa-twitter"></i></a>
-            {% endif %}
-            {%- if site.medium_username -%}
-            <a href="https://medium.com/@{{ site.medium_username }}" title="Medium"><i class="fab fa-medium"></i></a>
-            {% endif %}
-            {%- if site.quora_username -%}
-            <a href="https://www.quora.com/profile/{{ site.quora_username }}" title="Quora"><i class="fab fa-quora"></i></a>
-            {% endif %}
-            {%- if site.blogger_url -%}
-            <a href="{{ site.blogger_url }}" title="Blogger"><i class="fab fa-blogger-b"></i></a>
-            {% endif %}
-            {%- if site.work_url -%}
-            <a href="{{ site.work_url }}" title="Work"><i class="fas fa-briefcase"></i></a>
-            {% endif %}
-            {%- if site.wikidata_id -%}
-            <a href="https://www.wikidata.org/wiki/{{ site.wikidata_id }}" title="Wikidata"><i class="fas fa-barcode"></i></a>
-            {% endif %}
-            {%- if site.strava_userid -%}
-            <a href="https://www.strava.com/athletes/{{ site.strava_userid }}" title="Strava"><i class="fab fa-strava"></i></a>
-            {% endif %}
-            {%- if site.keybase_username -%}
-            <a href="https://keybase.io/{{ site.keybase_username }}" title="Keybase"><i class="fab fa-keybase"></i></a>
-            {% endif %}
-            {%- if site.gitlab_username -%}
-            <a href="https://gitlab.com/{{ site.gitlab_username }}" title="GitLab"><i class="fab fa-gitlab"></i></a>
-            {% endif %}
-            {%- if site.dblp_url -%}
-            <a href="{{ site.dblp_url }}" title="DBLP"><i class="ai ai-dblp"></i></a>
-            {% endif %}
-            {%- if site.stackoverflow_id -%}
-            <a href="https://stackoverflow.com/users/{{ site.stackoverflow_id }}" title="Stackoverflow"><i class="fab fa-stack-overflow"></i></a>
-            {% endif %}
-            {%- if site.rss_icon -%}
-            <a href="{{ site.baseurl | prepend: site.url }}/feed.xml" title="RSS Feed"><i class="fas fa-rss-square"></i></a>
-            {% endif %}
+<ul class="social">
+  {%- if site.social.email %}
+  <li><a href="mailto:{{ site.social.email }}" aria-label="Email" title="Email">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3 6.5h18v11H3zM3.5 7l8.5 6.5L20.5 7"/></svg>
+  </a></li>
+  {%- endif %}
+  {%- if site.social.scholar %}
+  <li><a href="https://scholar.google.com/citations?user={{ site.social.scholar }}" aria-label="Google Scholar" title="Google Scholar">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 3 1 9.5l4 2.4V17h2v-3.9l5 3 11-6.6zm0 9.6L4.8 9.5 12 5.3l7.2 4.2zM7 14.4V18c0 1.7 2.2 3 5 3s5-1.3 5-3v-3.6l-5 3z"/></svg>
+  </a></li>
+  {%- endif %}
+  {%- if site.social.github %}
+  <li><a href="https://github.com/{{ site.social.github }}" aria-label="GitHub" title="GitHub">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg>
+  </a></li>
+  {%- endif %}
+  {%- if site.social.twitter %}
+  <li><a href="https://x.com/{{ site.social.twitter }}" aria-label="X (Twitter)" title="X (Twitter)">
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.5z"/></svg>
+  </a></li>
+  {%- endif %}
+  {%- if site.cv %}
+  <li><a class="social-cv" href="{{ site.cv | relative_url }}">CV</a></li>
+  {%- endif %}
+</ul>
