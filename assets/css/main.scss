@@ -15,7 +15,7 @@
 
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --width: 760px;
+  --width: 920px;
 }
 
 @mixin dark {
@@ -55,6 +55,7 @@ body {
 main { flex: 1; }
 
 .container {
+  width: 100%;
   max-width: var(--width);
   margin: 0 auto;
   padding: 0 20px;
@@ -151,6 +152,8 @@ a:hover { text-decoration: underline; }
 }
 
 .hero-photo {
+  order: 2; // photo on the right, text on the left
+  margin-left: auto;
   flex: none;
   width: 180px;
   height: auto;
@@ -417,7 +420,7 @@ a:hover { text-decoration: underline; }
     gap: 1.25rem;
     padding-top: 2rem;
   }
-  .hero-photo { width: 120px; }
+  .hero-photo { order: 0; margin-left: 0; width: 120px; }
   .hero h1 { font-size: 2rem; }
   .header-inner {
     position: relative;
