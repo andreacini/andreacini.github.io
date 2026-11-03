@@ -11,7 +11,7 @@ icon: ⛰
 
 author:
   name: Andrea Cini
-  email: andrea.cini@epfl.ch
+  email: andrea.cini@polytechnique.edu
   photo: /assets/img/profile_pic2.jpg
 
 cv: /assets/pdf/cv_oct2026.pdf
@@ -22,7 +22,7 @@ affiliation: <a href="https://www.polytechnique.edu/en">École Polytechnique</a>
 
 # Social links (leave empty to hide)
 social:
-  email: andrea.cini@epfl.ch
+  email: andrea.cini@polytechnique.edu
   scholar: bQI2UIUAAAAJ
   github: andreacini
   twitter: andreacini1994
